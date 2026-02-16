@@ -1,0 +1,8 @@
+{
+  "id": "remote:github:anthropics/skills/skill-creator",
+  "tool": "antigravity",
+  "installed_name": "skill-creator",
+  "type": "remote",
+  "handle": "anthropics/skills/skill-creator",
+  "source": "github"
+}
