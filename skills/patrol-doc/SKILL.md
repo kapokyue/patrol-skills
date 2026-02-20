@@ -16,7 +16,6 @@ Answer Patrol documentation questions using the curated corpus in `references/`.
 
 ## Reference Map
 
-- `references/index.md` — corpus index, scope, and exclusions.
 - `references/overview-and-compatibility.md` — project overview, release notes, platform support, compatibility table.
 - `references/cli-commands.md` — `patrol build|devices|doctor|develop|test|update` usage and options.
 - `references/installation-and-setup.md` — install + Android/iOS/macOS setup and FAQ-level setup issues.
@@ -49,6 +48,7 @@ For large files, grep for high-signal tokens before reading fully:
 
 ## Scope Rules
 
-- Primary corpus is developer-focused.
-- Exclude marketing/services/pricing content unless user explicitly asks for it.
+- Primary corpus is developer-focused (setup, CLI, automation, CI, troubleshooting).
+- Excluded content: Articles & Resources, Marketing/Services/Pricing, Consultation/Training programs.
 - Preserve source meaning; do not invent undocumented flags or APIs.
+- Formatting note: MDX-specific wrapper components are flattened into plain Markdown.

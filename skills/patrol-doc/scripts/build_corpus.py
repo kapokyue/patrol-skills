@@ -156,18 +156,6 @@ def main() -> None:
         ],
     }
 
-    excluded = [
-        'Articles & Resources',
-        'Get in Touch with the Patrol Team',
-        'Getting started',
-        'Introduction',
-        'Patrol Services',
-        'Our experience in Patrol Setup',
-        'Custom Patrol Setup for your Project',
-        'Patrol Consultation',
-        'Patrol Training Program',
-    ]
-
     for file_name, starts_for_topic in topics.items():
         sections: list[str] = []
         for start in sorted(set(starts_for_topic)):
@@ -181,27 +169,7 @@ def main() -> None:
         header = f'# {title}\n\n'
         (OUT_DIR / file_name).write_text(header + content, encoding='utf-8')
 
-    index_lines = [
-        '# Patrol Developer Corpus Index\n\n',
-        'Organized, developer-focused references for the Patrol framework.\n\n',
-        '## Files\n\n',
-    ]
-    for file_name in topics:
-        index_lines.append(f'- [{file_name}](./{file_name})\n')
-
-    index_lines.append('\n## Excluded from primary corpus\n\n')
-    for section in excluded:
-        if section in starts:
-            index_lines.append(f'- {section}\n')
-
-    index_lines.append(
-        '\n## Notes\n\n'
-        '- This corpus prioritizes engineering usage (setup, CLI, automation, CI, troubleshooting).\n'
-        '- MDX-specific wrapper components are flattened into plain Markdown where possible.\n'
-    )
-
-    (OUT_DIR / 'index.md').write_text(''.join(index_lines), encoding='utf-8')
-    print(f'Generated {len(topics)} topic files and index at {OUT_DIR}')
+    print(f'Generated {len(topics)} topic files at {OUT_DIR}')
 
 
 if __name__ == '__main__':
