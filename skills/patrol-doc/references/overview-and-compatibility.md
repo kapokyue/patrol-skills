@@ -1,7 +1,7 @@
 # Overview And Compatibility
 
 
-# Patrol
+## Patrol
 
 Patrol is a powerful, open-source UI testing framework designed specifically for
 Flutter apps and released in September 2022. Developed and maintained by [LeanCode][leancode],
@@ -66,11 +66,11 @@ we use Patrol to test production-grade apps for clients across industries, and n
 
 [leancode]: https://leancode.co
 
-[native]: /documentation/native/overview
+[native]: https://patrol.leancode.co/documentation/native/overview
 
-[finders]: /documentation/finders/overview
+[finders]: https://patrol.leancode.co/documentation/finders/overview
 
-[hot restart]: /cli-commands/develop
+[hot restart]: https://patrol.leancode.co/cli-commands/develop
 
 [patrol_on_pubdev]: https://pub.dev/packages/patrol
 
@@ -80,7 +80,7 @@ we use Patrol to test production-grade apps for clients across industries, and n
 
 [github_repo]: https://github.com/leancodepl/patrol
 
-# Improved logging and reporting is here!
+## Improved logging and reporting is here!
 
 We’ve made some major improvements to how you can monitor and analyze your tests! With Patrol 3.13.0 and later, you’ll get:
 
@@ -91,9 +91,9 @@ We’ve made some major improvements to how you can monitor and analyze your tes
 
 For a full breakdown of these updates, check out the [Logs and test results][logs] page!
 
-[logs]: /documentation/logs
+[logs]: https://patrol.leancode.co/documentation/logs
 
-# New package - patrol_finders
+## New package - patrol_finders
 
 We're introducing [`patrol_finders`] - a new package in Patrol framework! It was
 created to make it easier to use Patrol finders in widget tests.
@@ -116,11 +116,11 @@ changes in this release - everything works the same as before. Though you may
 see some deprecation warnings in your code - you can get your code aligned with
 them to prepare for future changes.
 
-[Using Patrol finders in widget tests]: /documentation/finders/finders-setup
+[Using Patrol finders in widget tests]: https://patrol.leancode.co/documentation/finders/finders-setup
 
 [`patrol_finders`]: https://pub.dev/packages/patrol_finders
 
-# Patrol 3.0 is here
+## Patrol 3.0 is here
 
 Patrol 3.0 is the new major version of Patrol.
 
@@ -202,7 +202,7 @@ goal in mind – to make it the go-to UI testing framework for Flutter apps.
 
 [SettlePolicy.trySettle]: https://pub.dev/documentation/patrol_finders/latest/patrol_finders/SettlePolicy.html#trySettle
 
-# New major release - Patrol 4.0
+## New major release - Patrol 4.0
 
 Patrol 4.0 is live! Check out our [release article on Leancode's blog](https://leancode.co/blog/patrol-4-0-release).
 Read more about new features coming in this release in deep-dives articles:
@@ -212,9 +212,9 @@ Read more about new features coming in this release in deep-dives articles:
 
 We also updated documentation if you're looking for guides and examples:
 
-* [see how to test on Web with Patrol](/documentation/web)
-* [find out what features offers our VS Code extension](/documentation/other/patrol-devtools-extension)
-* [learn how to use `platform` instead of `native`](/documentation/native/usage)
+* [see how to test on Web with Patrol](https://patrol.leancode.co/documentation/web)
+* [find out what features offers our VS Code extension](https://patrol.leancode.co/documentation/other/patrol-devtools-extension)
+* [learn how to use `platform` instead of `native`](https://patrol.leancode.co/documentation/native/usage)
 
 Run `patrol update` and upgrade `patrol` in your pubspec to use the newest version of Patrol.
 You can find the VS Code extension in Marketplace inside VS Code.
@@ -222,7 +222,7 @@ You can find the VS Code extension in Marketplace inside VS Code.
 We're hoping this early Christmas present will make your mobile testing easier!
 If you have any questions or want to submit feedback, head on to [GitHub](https://github.com/leancodepl/patrol) or [our Discord server](https://discord.gg/ukBK5t4EZg). See you there!
 
-# Compatibility table
+## Compatibility table
 
 The following table describes which versions of `patrol`
 and `patrol_cli` are compatible with each other.
@@ -261,7 +261,7 @@ This table shows the compatible versions between patrol\_cli and patrol packages
 * Ranges (e.g., `2.0.0 - 2.1.0`) indicate compatibility with all versions in that range
 * The minimum Flutter version is required for both packages to work correctly
 
-# Supported platforms
+## Supported platforms
 
 Patrol works on:
 
@@ -275,4 +275,4 @@ On mobile platforms it works on both physical and virtual devices.
 
 If you want to check which native features are supported, see [feature parity].
 
-[feature parity]: /documentation/native/feature-parity
+[feature parity]: https://patrol.leancode.co/documentation/native/feature-parity

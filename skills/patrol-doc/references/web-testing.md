@@ -1,7 +1,7 @@
 # Web Testing
 
 
-# Flutter Web Testing
+## Flutter Web Testing
 
 Patrol provides support for running integration tests on Flutter web applications using
 [Playwright](https://playwright.dev/), a powerful browser automation framework. This allows you to handle native web

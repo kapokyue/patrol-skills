@@ -1,7 +1,7 @@
 # Recipes And Examples
 
 
-# Write your first test
+## Write your first test
 
 Patrol is a powerful, open-source testing framework created by LeanCode that enhances Flutter's testing capabilities by enabling interaction with native platform features directly in Dart. It allows to handle permission dialogs, notifications, WebViews, and device settings—features previously unavailable in standard Flutter tests, making it truly possible to test the whole app.
 
@@ -443,13 +443,13 @@ And just like that, we have now tested the whole flow of the app with Patrol! If
 
 [install the Patrol CLI]: https://pub.dev/packages/patrol_cli#installation
 
-[Patrol Setup Docs]: /documentation
+[Patrol Setup Docs]: https://patrol.leancode.co/documentation
 
 [STARTER PROJECT]: https://github.com/ResoCoder/patrol-basics-tutorial
 
-[Learn more from the docs]: /documentation/native/overview
+[Learn more from the docs]: https://patrol.leancode.co/documentation/native/overview
 
-# Disabling/enabling Bluetooth
+## Disabling/enabling Bluetooth
 
 In this video we show you how to toggle Bluetooth using Patrol framework.
 
@@ -476,7 +476,7 @@ void main() {
 }
 ```
 
-# Granting camera permission
+## Granting camera permission
 
 In this video we show you how to grant camera permission using Patrol framework.
 
@@ -508,7 +508,7 @@ void main() {
 
 ```
 
-# Pick images from gallery
+## Pick images from gallery
 
 Patrol provides functionality to pick one or many images from the Android and iOS gallery using the `pickImageFromGallery` or `pickMultipleImagesFromGallery` methods from the native automator.
 
@@ -643,7 +643,7 @@ void main() {
 }
 ```
 
-# Pull to refresh
+## Pull to refresh
 
 Patrol provides a function for pull-to-refresh gesture (`pullToRefresh`), allowing you to use refresh functionality in your tests.
 
@@ -696,7 +696,7 @@ await $.platform.mobile.pullToRefresh(
 );
 ```
 
-# Take photo using camera
+## Take photo using camera
 
 Patrol provides functionality to take a photo using the Android and iOS camera.
 
@@ -771,7 +771,7 @@ void main() {
 }
 ```
 
-# Patrol tags
+## Patrol tags
 
 Patrol tags allow you to organize and selectively run your patrol tests. You can assign tags to individual tests and then use those tags to filter which tests to run or exclude.
 By design, patrol tags should work the same as flutter test tags.
@@ -820,13 +820,13 @@ void main() {
 Use the `--tags` option to run only tests that have specific tags:
 
 ```bash
-# Run tests with the 'smoke' tag
+## Run tests with the 'smoke' tag
 patrol test --tags smoke
 
-# Run tests with either 'smoke' or 'regression' tag
+## Run tests with either 'smoke' or 'regression' tag
 patrol test --tags='smoke||regression'
 
-# Run tests with both 'login' and 'smoke' tags
+## Run tests with both 'login' and 'smoke' tags
 patrol test --tags='(login && smoke)'
 ```
 
@@ -835,10 +835,10 @@ patrol test --tags='(login && smoke)'
 Use the `--exclude-tags` option to exclude tests that have specific tags:
 
 ```bash
-# Exclude tests with the 'regression' tag
+## Exclude tests with the 'regression' tag
 patrol test --exclude-tags regression
 
-# Exclude tests with either 'smoke' or 'regression' tag
+## Exclude tests with either 'smoke' or 'regression' tag
 patrol test --exclude-tags='(smoke||regression)'
 ```
 
@@ -858,19 +858,19 @@ For more information about tag rules, see: [https://pub.dev/packages/test#taggin
 ### Examples
 
 ```bash
-# Run tests that have either 'smoke' OR 'regression' tag
+## Run tests that have either 'smoke' OR 'regression' tag
 patrol test --tags='smoke||regression'
 
-# Run tests that have BOTH 'login' AND 'smoke' tags
+## Run tests that have BOTH 'login' AND 'smoke' tags
 patrol test --tags='(login && smoke)'
 
-# Run tests with 'payment' OR 'navigation' tag, but NOT 'regression'
+## Run tests with 'payment' OR 'navigation' tag, but NOT 'regression'
 patrol test --tags='(payment || navigation) && !regression'
 
-# Combine --tags with --exclude-tags
+## Combine --tags with --exclude-tags
 patrol test --tags='smoke||regression' --exclude-tags='slow'
 
-# Complex expression: (login OR payment) AND (smoke OR regression)
+## Complex expression: (login OR payment) AND (smoke OR regression)
 patrol test --tags='((login || payment) && (smoke || regression))'
 ```
 

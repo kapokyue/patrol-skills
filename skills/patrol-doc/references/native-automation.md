@@ -1,330 +1,6 @@
 # Native Automation
 
-
-# Feature parity
-
-Here you can see what you can already do with Patrol's `PlatformAutomator`, and what
-is yet to be implemented. We hope that it will help you evaluate Patrol.
-
-We strive for high feature parity across platforms, but in some cases it's
-impossible to reach 100%. Web support is available for browser-specific automation.
-
-  macOS support is still in alpha and does not have platform automation implemented yet.
-
-## Mobile features
-
-These features are available via `$.platform.mobile` and work on both Android and iOS:
-
-| **Feature**                    | **Android**  | **iOS**         |
-| ------------------------------ | ------------ | --------------- |
-| [Press home]                   | ✅            | ✅               |
-| [Open app]                     | ✅            | ✅               |
-| [Open notifications]           | ✅            | ✅               |
-| [Close notifications]          | ✅            | ✅               |
-| [Open quick settings]          | ✅            | ✅               |
-| [Open URL]                     | ✅            | ✅               |
-| [Enable/disable dark mode]     | ✅            | ✅               |
-| [Enable/disable airplane mode] | ✅            | ✅               |
-| [Enable/disable cellular]      | ✅            | ✅               |
-| [Enable/disable Wi-Fi]         | ✅            | ✅               |
-| [Enable/disable Bluetooth]     | ✅            | ✅               |
-| [Press volume up]              | ✅            | ✅ (simulator ❌) |
-| [Press volume down]            | ✅            | ✅ (simulator ❌) |
-| [Handle permission dialogs]    | ✅            | ✅               |
-| [Set mock location]            | ✅ (device ❌) | ✅               |
-| [Get OS version]               | ✅            | ✅               |
-| [Check virtual device]         | ✅            | ✅               |
-
-## Android-specific features
-
-These features are available via `$.platform.android`:
-
-| **Feature**                | **Android**   |
-| -------------------------- | ------------- |
-| [Press back]               | ✅             |
-| [Double press recent apps] | ✅             |
-| [Tap]                      | ✅             |
-| [Double tap]               | ✅             |
-| [Tap at coordinate]        | ✅             |
-| [Enter text]               | ✅             |
-| [Enter text by index]      | ✅             |
-| [Swipe]                    | ✅             |
-| [Swipe back]               | ✅             |
-| [Pull to refresh]          | ✅             |
-| [Tap on notification]      | ✅             |
-| [Enable/disable location]  | ✅             |
-| [Take camera photo]        | ✅             |
-| [Pick image from gallery]  | ✅             |
-| [Pick multiple images]     | ✅             |
-| Interact with WebView      | ⚠️ see [#244] |
-
-## iOS-specific features
-
-These features are available via `$.platform.ios`:
-
-| **Feature**                   | **iOS** |
-| ----------------------------- | ------- |
-| [iOS Tap]                     | ✅       |
-| [iOS Double tap]              | ✅       |
-| [iOS Tap at coordinate]       | ✅       |
-| [iOS Enter text]              | ✅       |
-| [iOS Enter text by index]     | ✅       |
-| [iOS Swipe]                   | ✅       |
-| [iOS Swipe back]              | ✅       |
-| [iOS Pull to refresh]         | ✅       |
-| [iOS Tap on notification]     | ✅       |
-| [Close heads-up notification] | ✅       |
-| [iOS Take camera photo]       | ✅       |
-| [iOS Pick image from gallery] | ✅       |
-| [iOS Pick multiple images]    | ✅       |
-| Interact with WebView         | ✅       |
-
-## Web-specific features
-
-These features are available via `$.platform.web` for Flutter Web apps:
-
-| **Feature**                      | **Web** |
-| -------------------------------- | ------- |
-| [Web Tap]                        | ✅       |
-| [Web Enter text]                 | ✅       |
-| [Scroll to]                      | ✅       |
-| [Enable/disable dark mode (web)] | ✅       |
-| [Grant/clear permissions]        | ✅       |
-| [Manage cookies]                 | ✅       |
-| [Upload files]                   | ✅       |
-| [Handle dialogs]                 | ✅       |
-| [Press key/key combo]            | ✅       |
-| [Browser navigation]             | ✅       |
-| [Clipboard operations]           | ✅       |
-| [Resize window]                  | ✅       |
-| [Verify file downloads]          | ✅       |
-
-{/* Issue links */}
-
-[#244]: https://github.com/leancodepl/patrol/issues/244
-
-{/* MobileAutomator links */}
-
-[Press home]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/pressHome.html
-
-[Open app]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openApp.html
-
-[Open notifications]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openNotifications.html
-
-[Close notifications]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/closeNotifications.html
-
-[Open quick settings]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openQuickSettings.html
-
-[Open URL]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openUrl.html
-
-[Enable/disable dark mode]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableDarkMode.html
-
-[Enable/disable airplane mode]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableAirplaneMode.html
-
-[Enable/disable cellular]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableCellular.html
-
-[Enable/disable Wi-Fi]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableWifi.html
-
-[Enable/disable Bluetooth]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableBluetooth.html
-
-[Press volume up]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/pressVolumeUp.html
-
-[Press volume down]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/pressVolumeDown.html
-
-[Handle permission dialogs]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/grantPermissionWhenInUse.html
-
-[Set mock location]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/setMockLocation.html
-
-[Get OS version]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/getOsVersion.html
-
-[Check virtual device]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/isVirtualDevice.html
-
-{/* AndroidAutomator links */}
-
-[Press back]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pressBack.html
-
-[Double press recent apps]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pressDoubleRecentApps.html
-
-[Tap]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/tap.html
-
-[Double tap]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/doubleTap.html
-
-[Tap at coordinate]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/tapAt.html
-
-[Enter text]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/enterText.html
-
-[Enter text by index]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/enterTextByIndex.html
-
-[Swipe]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/swipe.html
-
-[Swipe back]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/swipeBack.html
-
-[Pull to refresh]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pullToRefresh.html
-
-[Tap on notification]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/tapOnNotificationBySelector.html
-
-[Enable/disable location]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/enableLocation.html
-
-[Take camera photo]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/takeCameraPhoto.html
-
-[Pick image from gallery]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pickImageFromGallery.html
-
-[Pick multiple images]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pickMultipleImagesFromGallery.html
-
-{/* IOSAutomator links */}
-
-[iOS Tap]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/tap.html
-
-[iOS Double tap]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/doubleTap.html
-
-[iOS Tap at coordinate]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/tapAt.html
-
-[iOS Enter text]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/enterText.html
-
-[iOS Enter text by index]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/enterTextByIndex.html
-
-[iOS Swipe]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/swipe.html
-
-[iOS Swipe back]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/swipeBack.html
-
-[iOS Pull to refresh]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/pullToRefresh.html
-
-[iOS Tap on notification]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/tapOnNotificationBySelector.html
-
-[Close heads-up notification]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/closeHeadsUpNotification.html
-
-[iOS Take camera photo]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/takeCameraPhoto.html
-
-[iOS Pick image from gallery]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/pickImageFromGallery.html
-
-[iOS Pick multiple images]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/pickMultipleImagesFromGallery.html
-
-{/* WebAutomator links */}
-
-[Web Tap]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/tap.html
-
-[Web Enter text]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/enterText.html
-
-[Scroll to]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/scrollTo.html
-
-[Enable/disable dark mode (web)]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/enableDarkMode.html
-
-[Grant/clear permissions]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/grantPermissions.html
-
-[Manage cookies]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/addCookie.html
-
-[Upload files]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/uploadFile.html
-
-[Handle dialogs]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/acceptNextDialog.html
-
-[Press key/key combo]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/pressKey.html
-
-[Browser navigation]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/goBack.html
-
-[Clipboard operations]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/getClipboard.html
-
-[Resize window]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/resizeWindow.html
-
-[Verify file downloads]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/verifyFileDownloads.html
-
-# Native Automation 2.0 (native2)
-
-  `native2` is deprecated starting from Patrol version `4.0.0` and will be removed in a future release.
-  Please migrate to the new [Platform Automation API](/documentation/native/overview) using `$.platform.mobile` instead.
-
-  `native2` is available starting from Patrol version `3.6.0`.
-
-## What is `native2`?
-
-`native2` was created to address fundamental limitations in the original native automation approach. The original native API was primarily designed for Android, and attempts to make a single `Selector` work across both
-platforms proved problematic because **iOS and Android use different selector arguments** (eg. Android's `resourceName` vs iOS's `identifier`) and a single selector approach couldn't effectively handle the fundamental differences
-between iOS and Android element identification. **`native2` provides platform-specific selectors that work with both Android and iOS, giving you more accurate selectors instead of one shared selector.**
-
-### Before `native2`
-
-```dart
-// You were forced to use flaky text-based selectors that work on both platforms
-await $.native.tap(Selector(textContains: 'Login'));
-```
-
-```dart
-// Before: Sometimes you needed to use platform-specific if statements in your test code.
-if (Platform.isAndroid) {
-  await $.native.tap(Selector(resourceId: 'com.android.camera2:id/shutter_button'));
-} else {
-  await $.native.tap(Selector(text: 'Take Picture'));
-}
-```
-
-### With `native2`
-
-`native2` provides a single method call that works across both platforms:
-
-```dart
-// After: Single method call with platform-specific selectors
-await $.native2.tap(
-  NativeSelector(
-    android: AndroidSelector(
-      resourceName: 'com.android.camera2:id/shutter_button',
-    ),
-    ios: IOSSelector(label: 'Take Picture'),
-  ),
-);
-```
-
-### Text Input Operations
-
-```dart
-// Enter password in secure field
-await $.native2.enterText(
-  NativeSelector(
-    android: AndroidSelector(
-      contentDescription: 'Password',
-    ),
-    ios: IOSSelector(
-      elementType: IOSElementType.secureTextField,
-    ),
-  ),
-  text: 'secretpassword',
-);
-```
-
-### More platform-specific attributes like elementType for iOS
-
-```dart
-// Find elements by instance (when multiple elements match)
-await $.native2.tap(
-  NativeSelector(
-    android: AndroidSelector(
-      className: 'android.widget.Button',
-      instance: 2, // Third button (0-indexed)
-    ),
-    ios: IOSSelector(
-      elementType: IOSElementType.button,
-      instance: 2, // Third button (0-indexed)
-    ),
-  ),
-);
-```
-
-### Specifying App ID (iOS)
-
-When working with iOS, you may need to specify the `appId` parameter to interact with elements in specific applications. This is particularly useful when your test needs to interact with system apps like Safari, Settings, or other third-party applications.
-
-  The `appId` parameter is used for iOS. On Android, it will be ignored.
-
-```dart
-await $.native2.tap(
-  appId: 'com.apple.mobilesafari',
-  NativeSelector(
-    ios: IOSSelector(elementType: IOSElementType.button, label: 'Open'),
-  ),
-);
-```
-
-  Remember that if you don't provide a platform-specific selector (iOS or Android) and run the command on that platform, the command will fail.
-
-# Overview
+## Overview
 
 Flutter's [integration\_test][integration_test] does a good job at providing
 basic support for integration testing Flutter apps. What it can't do is
@@ -388,7 +64,7 @@ void main() {
 
 [integration_test]: https://github.com/flutter/flutter/tree/master/packages/integration_test
 
-# Usage
+## Usage
 
 Once set up, interacting with the native UI using Patrol is very easy!
 
@@ -665,3 +341,328 @@ To see more integration tests demonstrating Patrol's various features, check out
 our [example app][example_app].
 
 [example_app]: https://github.com/leancodepl/patrol/tree/master/packages/patrol/example
+
+## Feature parity
+
+Here you can see what you can already do with Patrol's `PlatformAutomator`, and what
+is yet to be implemented. We hope that it will help you evaluate Patrol.
+
+We strive for high feature parity across platforms, but in some cases it's
+impossible to reach 100%. Web support is available for browser-specific automation.
+
+  macOS support is still in alpha and does not have platform automation implemented yet.
+
+## Native Automation 2.0 (native2)
+
+> **Warning**
+> `native2` is deprecated starting from Patrol version `4.0.0` and will be removed in a future release.
+  Please migrate to the new [Platform Automation API](https://patrol.leancode.co/documentation/native/overview) using `$.platform.mobile` instead.
+
+  `native2` is available starting from Patrol version `3.6.0`.
+
+## Mobile features
+
+These features are available via `$.platform.mobile` and work on both Android and iOS:
+
+| **Feature**                    | **Android**  | **iOS**         |
+| ------------------------------ | ------------ | --------------- |
+| [Press home]                   | ✅            | ✅               |
+| [Open app]                     | ✅            | ✅               |
+| [Open notifications]           | ✅            | ✅               |
+| [Close notifications]          | ✅            | ✅               |
+| [Open quick settings]          | ✅            | ✅               |
+| [Open URL]                     | ✅            | ✅               |
+| [Enable/disable dark mode]     | ✅            | ✅               |
+| [Enable/disable airplane mode] | ✅            | ✅               |
+| [Enable/disable cellular]      | ✅            | ✅               |
+| [Enable/disable Wi-Fi]         | ✅            | ✅               |
+| [Enable/disable Bluetooth]     | ✅            | ✅               |
+| [Press volume up]              | ✅            | ✅ (simulator ❌) |
+| [Press volume down]            | ✅            | ✅ (simulator ❌) |
+| [Handle permission dialogs]    | ✅            | ✅               |
+| [Set mock location]            | ✅ (device ❌) | ✅               |
+| [Get OS version]               | ✅            | ✅               |
+| [Check virtual device]         | ✅            | ✅               |
+
+## Android-specific features
+
+These features are available via `$.platform.android`:
+
+| **Feature**                | **Android**   |
+| -------------------------- | ------------- |
+| [Press back]               | ✅             |
+| [Double press recent apps] | ✅             |
+| [Tap]                      | ✅             |
+| [Double tap]               | ✅             |
+| [Tap at coordinate]        | ✅             |
+| [Enter text]               | ✅             |
+| [Enter text by index]      | ✅             |
+| [Swipe]                    | ✅             |
+| [Swipe back]               | ✅             |
+| [Pull to refresh]          | ✅             |
+| [Tap on notification]      | ✅             |
+| [Enable/disable location]  | ✅             |
+| [Take camera photo]        | ✅             |
+| [Pick image from gallery]  | ✅             |
+| [Pick multiple images]     | ✅             |
+| Interact with WebView      | ⚠️ see [#244] |
+
+## iOS-specific features
+
+These features are available via `$.platform.ios`:
+
+| **Feature**                   | **iOS** |
+| ----------------------------- | ------- |
+| [iOS Tap]                     | ✅       |
+| [iOS Double tap]              | ✅       |
+| [iOS Tap at coordinate]       | ✅       |
+| [iOS Enter text]              | ✅       |
+| [iOS Enter text by index]     | ✅       |
+| [iOS Swipe]                   | ✅       |
+| [iOS Swipe back]              | ✅       |
+| [iOS Pull to refresh]         | ✅       |
+| [iOS Tap on notification]     | ✅       |
+| [Close heads-up notification] | ✅       |
+| [iOS Take camera photo]       | ✅       |
+| [iOS Pick image from gallery] | ✅       |
+| [iOS Pick multiple images]    | ✅       |
+| Interact with WebView         | ✅       |
+
+## Web-specific features
+
+These features are available via `$.platform.web` for Flutter Web apps:
+
+| **Feature**                      | **Web** |
+| -------------------------------- | ------- |
+| [Web Tap]                        | ✅       |
+| [Web Enter text]                 | ✅       |
+| [Scroll to]                      | ✅       |
+| [Enable/disable dark mode (web)] | ✅       |
+| [Grant/clear permissions]        | ✅       |
+| [Manage cookies]                 | ✅       |
+| [Upload files]                   | ✅       |
+| [Handle dialogs]                 | ✅       |
+| [Press key/key combo]            | ✅       |
+| [Browser navigation]             | ✅       |
+| [Clipboard operations]           | ✅       |
+| [Resize window]                  | ✅       |
+| [Verify file downloads]          | ✅       |
+
+{/* Issue links */}
+
+[#244]: https://github.com/leancodepl/patrol/issues/244
+
+{/* MobileAutomator links */}
+
+[Press home]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/pressHome.html
+
+[Open app]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openApp.html
+
+[Open notifications]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openNotifications.html
+
+[Close notifications]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/closeNotifications.html
+
+[Open quick settings]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openQuickSettings.html
+
+[Open URL]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/openUrl.html
+
+[Enable/disable dark mode]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableDarkMode.html
+
+[Enable/disable airplane mode]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableAirplaneMode.html
+
+[Enable/disable cellular]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableCellular.html
+
+[Enable/disable Wi-Fi]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableWifi.html
+
+[Enable/disable Bluetooth]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/enableBluetooth.html
+
+[Press volume up]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/pressVolumeUp.html
+
+[Press volume down]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/pressVolumeDown.html
+
+[Handle permission dialogs]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/grantPermissionWhenInUse.html
+
+[Set mock location]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/setMockLocation.html
+
+[Get OS version]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/getOsVersion.html
+
+[Check virtual device]: https://pub.dev/documentation/patrol/latest/patrol/MobileAutomator/isVirtualDevice.html
+
+{/* AndroidAutomator links */}
+
+[Press back]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pressBack.html
+
+[Double press recent apps]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pressDoubleRecentApps.html
+
+[Tap]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/tap.html
+
+[Double tap]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/doubleTap.html
+
+[Tap at coordinate]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/tapAt.html
+
+[Enter text]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/enterText.html
+
+[Enter text by index]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/enterTextByIndex.html
+
+[Swipe]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/swipe.html
+
+[Swipe back]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/swipeBack.html
+
+[Pull to refresh]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pullToRefresh.html
+
+[Tap on notification]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/tapOnNotificationBySelector.html
+
+[Enable/disable location]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/enableLocation.html
+
+[Take camera photo]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/takeCameraPhoto.html
+
+[Pick image from gallery]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pickImageFromGallery.html
+
+[Pick multiple images]: https://pub.dev/documentation/patrol/latest/patrol/AndroidAutomator/pickMultipleImagesFromGallery.html
+
+{/* IOSAutomator links */}
+
+[iOS Tap]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/tap.html
+
+[iOS Double tap]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/doubleTap.html
+
+[iOS Tap at coordinate]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/tapAt.html
+
+[iOS Enter text]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/enterText.html
+
+[iOS Enter text by index]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/enterTextByIndex.html
+
+[iOS Swipe]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/swipe.html
+
+[iOS Swipe back]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/swipeBack.html
+
+[iOS Pull to refresh]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/pullToRefresh.html
+
+[iOS Tap on notification]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/tapOnNotificationBySelector.html
+
+[Close heads-up notification]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/closeHeadsUpNotification.html
+
+[iOS Take camera photo]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/takeCameraPhoto.html
+
+[iOS Pick image from gallery]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/pickImageFromGallery.html
+
+[iOS Pick multiple images]: https://pub.dev/documentation/patrol/latest/patrol/IOSAutomator/pickMultipleImagesFromGallery.html
+
+{/* WebAutomator links */}
+
+[Web Tap]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/tap.html
+
+[Web Enter text]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/enterText.html
+
+[Scroll to]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/scrollTo.html
+
+[Enable/disable dark mode (web)]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/enableDarkMode.html
+
+[Grant/clear permissions]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/grantPermissions.html
+
+[Manage cookies]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/addCookie.html
+
+[Upload files]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/uploadFile.html
+
+[Handle dialogs]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/acceptNextDialog.html
+
+[Press key/key combo]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/pressKey.html
+
+[Browser navigation]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/goBack.html
+
+[Clipboard operations]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/getClipboard.html
+
+[Resize window]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/resizeWindow.html
+
+[Verify file downloads]: https://pub.dev/documentation/patrol/latest/patrol/WebAutomator/verifyFileDownloads.html
+
+## What is `native2`?
+
+`native2` was created to address fundamental limitations in the original native automation approach. The original native API was primarily designed for Android, and attempts to make a single `Selector` work across both
+platforms proved problematic because **iOS and Android use different selector arguments** (eg. Android's `resourceName` vs iOS's `identifier`) and a single selector approach couldn't effectively handle the fundamental differences
+between iOS and Android element identification. **`native2` provides platform-specific selectors that work with both Android and iOS, giving you more accurate selectors instead of one shared selector.**
+
+### Before `native2`
+
+```dart
+// You were forced to use flaky text-based selectors that work on both platforms
+await $.native.tap(Selector(textContains: 'Login'));
+```
+
+```dart
+// Before: Sometimes you needed to use platform-specific if statements in your test code.
+if (Platform.isAndroid) {
+  await $.native.tap(Selector(resourceId: 'com.android.camera2:id/shutter_button'));
+} else {
+  await $.native.tap(Selector(text: 'Take Picture'));
+}
+```
+
+### With `native2`
+
+`native2` provides a single method call that works across both platforms:
+
+```dart
+// After: Single method call with platform-specific selectors
+await $.native2.tap(
+  NativeSelector(
+    android: AndroidSelector(
+      resourceName: 'com.android.camera2:id/shutter_button',
+    ),
+    ios: IOSSelector(label: 'Take Picture'),
+  ),
+);
+```
+
+### Text Input Operations
+
+```dart
+// Enter password in secure field
+await $.native2.enterText(
+  NativeSelector(
+    android: AndroidSelector(
+      contentDescription: 'Password',
+    ),
+    ios: IOSSelector(
+      elementType: IOSElementType.secureTextField,
+    ),
+  ),
+  text: 'secretpassword',
+);
+```
+
+### More platform-specific attributes like elementType for iOS
+
+```dart
+// Find elements by instance (when multiple elements match)
+await $.native2.tap(
+  NativeSelector(
+    android: AndroidSelector(
+      className: 'android.widget.Button',
+      instance: 2, // Third button (0-indexed)
+    ),
+    ios: IOSSelector(
+      elementType: IOSElementType.button,
+      instance: 2, // Third button (0-indexed)
+    ),
+  ),
+);
+```
+
+### Specifying App ID (iOS)
+
+When working with iOS, you may need to specify the `appId` parameter to interact with elements in specific applications. This is particularly useful when your test needs to interact with system apps like Safari, Settings, or other third-party applications.
+
+  The `appId` parameter is used for iOS. On Android, it will be ignored.
+
+```dart
+await $.native2.tap(
+  appId: 'com.apple.mobilesafari',
+  NativeSelector(
+    ios: IOSSelector(elementType: IOSElementType.button, label: 'Open'),
+  ),
+);
+```
+
+  Remember that if you don't provide a platform-specific selector (iOS or Android) and run the command on that platform, the command will fail.
+

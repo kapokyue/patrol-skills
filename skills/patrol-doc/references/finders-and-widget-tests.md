@@ -1,7 +1,7 @@
 # Finders And Widget Tests
 
 
-# Using Patrol finders in widget tests
+## Using Patrol finders in widget tests
 
 Since `patrol_finders` is a separate package, referenced in `patrol` package,
 you can use it in your widget or golden tests, without depending on `patrol`.
@@ -81,7 +81,7 @@ To run the test, simply execute:
 flutter test
 ```
 
-# Overview
+## Overview
 
 Flutter's finders are powerful, but not very intuitive to use.
 
@@ -138,7 +138,7 @@ patrolWidgetTest('signs up', (PatrolTester $) async {
 });
 ```
 
-# Usage
+## Usage
 
 This page introduces Patrol finder system. Let's get our hands dirty
 and find some widgets!

@@ -1,7 +1,7 @@
 # Ci And Device Farms
 
 
-# Overview
+## Overview
 
 This section of the documentation is focused on running Patrol tests as part of
 your Continuous Integration workflows.
@@ -10,7 +10,7 @@ Having tests doesn't bring you any benefits if you don't automatically verify
 that they pass. We know this too well, and we're putting a lot of work into
 making it easy to do so.
 
-# Platforms
+## Platforms
 
 In this document, we'll outline a few ways to run Patrol UI tests of Flutter
 apps.
@@ -31,7 +31,7 @@ There are quite a few solutions in each of these groups, and each is unique, but
 generally, **device labs trade flexibility for ease of use**. They're a good fit
 for most apps but make certain more complicated scenarios impossible.
 
-# Device labs
+## Device labs
 
 ### Firebase Test Lab
 
@@ -96,7 +96,7 @@ flow. When you have access to the shell filesystem (which you do have in the
 
 This is not possible on device labs.
 
-# Traditional
+## Traditional
 
 ### Codemagic
 
@@ -196,14 +196,14 @@ about your experiences!
 
 [running android integration tests on codemagic]: https://blog.codemagic.io/how-to-test-native-features-in-flutter-apps-with-patrol-and-codemagic/
 
-# BrowserStack
+## BrowserStack
 
 ## Setup
 
 [BrowserStack App Automate] is a popular cloud device farm. You can use it to run your tests on real devices.
 
-    
-      
+
+
         ### Change runner
 
         Modify the **app-level build.gradle**:
@@ -220,47 +220,47 @@ about your experiences!
 
         // ...
         ```
-      
-    
+
+
 
     That's it! You can now use `bs_android` to schedule a test run.
-  
 
-    
+
+
       You need to do a [Setup for physical iOS devices] first.
-    
+
 
     We need to convert your tests to use [Xcode test plans].
 
-    
+
       Make sure that the project name is "Runner" and the scheme is named "Runner" - this is the default name for the Flutter project.
-    
 
-    
-      
+
+
+
         Open your project in Xcode and edit the scheme:
-      
 
-      
+
+
         Go to the **Test** tab and convert your tests to use test plans:
 
-      
 
-      
+
+
         Create from scheme:
-      
 
-      
+
+
         Rename to "TestPlan" and save:
 
-        
+
           It has to be named "TestPlan" to work with the `bs_ios` script.
-        
-      
+
+
 
       Now, you can schedule a test run using the `bs_ios` script.
-    
-  
+
+
 
 You can choose between running tests in a recommended way using scripts or manually:
 
@@ -314,7 +314,7 @@ You can choose between running tests in a recommended way using scripts or manua
     ```
 
     That's all! "Success" means that the test execution was scheduled successfully.
-  
+
 
     You can follow BrowserStack's docs and/or follow the code of `bs_android` and `bs_ios` scripts:
 
@@ -322,7 +322,7 @@ You can choose between running tests in a recommended way using scripts or manua
     2. Upload the app under test APK to BrowserStack ([see Android docs][bs_android_app_docs]) ([see iOS docs][bs_ios_app_docs])
     3. Upload the instrumentation app APK to BrowserStack ([see Android docs][bs_android_test_docs]) ([see iOS docs][bs_ios_test_docs])
     4. Start test execution on BrowserStack ([see Android docs][bs_execute_android_docs]) ([see iOS docs][bs_execute_ios_docs])
-  
+
 
 After scheduling the test execution, you can check the status of the test execution in the [App Automate dashboard][bs_app_automate_dashboard].
 
@@ -336,7 +336,7 @@ If you need to change the test configuration, check out full list of available d
 
 [bs_app_automate_dashboard]: https://app-automate.browserstack.com/dashboard/v2
 
-[Setup for physical iOS devices]: /documentation/physical-ios-devices-setup
+[Setup for physical iOS devices]: https://patrol.leancode.co/documentation/physical-ios-devices-setup
 
 [Xcode test plans]: https://developer.apple.com/documentation/xcode/organizing-tests-to-improve-feedback
 
@@ -346,7 +346,7 @@ If you need to change the test configuration, check out full list of available d
 
 [bs_devices]: https://www.browserstack.com/list-of-browsers-and-platforms/app_automate
 
-[patrol build]: /cli-commands/build
+[patrol build]: https://patrol.leancode.co/cli-commands/build
 
 [bs_android_app_docs]: https://www.browserstack.com/docs/app-automate/api-reference/espresso/apps#upload-an-app
 
@@ -360,7 +360,7 @@ If you need to change the test configuration, check out full list of available d
 
 [bs_execute_ios_docs]: https://www.browserstack.com/docs/app-automate/api-reference/xcuitest/builds#execute-a-build
 
-# Firebase Test Lab
+## Firebase Test Lab
 
 There are many device lab providers. Below we're showing how to run Patrol tests
 on [Firebase Test Lab], because it's popular in the Flutter community, but the
@@ -395,25 +395,25 @@ Farm][aws_device_farm].
         --environment-variables clearPackageData=true
     ```
 
-    
+
       You must [install the gcloud tool] first. [Here][gcloud_android] you can learn
       more about all available options and flags.
-    
 
-    
+
+
       The environment variable `clearPackageData=true` tells orchestrator to clear the
       package data between test runs. Keep in mind that it clears only the data of your
       app, not other data on the device, e.g. Chrome.
-    
+
 
     It's convenient to create a shell script to avoid typing that long command
     every time. You might want to take a look at Patrol example app's
     [run\_android\_testlab script][example_android_script].
 
-    
+
       On Android, all permissions are granted by default. This behavior can be
       changed using the [alpha version of the gcloud tool].
-    
+
   </Tab>
 
   <Tab value="iOS">
@@ -462,10 +462,10 @@ Farm][aws_device_farm].
       --device model=iphone8,version=16.2,locale=en_US,orientation=portrait
     ```
 
-    
+
       You must [install the gcloud tool] first. [Here][gcloud_ios] you can learn
       more about all available options and flags.
-    
+
 
     If your `.xctestrun` file has different iOS version in its name than the
     device you're running on, simply rename the `.xctestrun` so that the version
@@ -476,7 +476,7 @@ Farm][aws_device_farm].
     [run\_ios\_testlab script][example_ios_script].
   </Tab>
 
-[native setup]: /documentation
+[native setup]: https://patrol.leancode.co/documentation
 
 [gcloud]: https://cloud.google.com/sdk/gcloud
 
@@ -496,9 +496,7 @@ Farm][aws_device_farm].
 
 [alpha version of the gcloud tool]: https://cloud.google.com/sdk/gcloud/reference/alpha/firebase/test/android/run#--grant-permissions
 
-# LambdaTest
-
-# LambdaTest overview
+## LambdaTest
 
 [LambdaTest App Test Automation] is a popular cloud device farm.
 

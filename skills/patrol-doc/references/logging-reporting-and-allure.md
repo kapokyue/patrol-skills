@@ -1,7 +1,7 @@
 # Logging Reporting And Allure
 
 
-# Logs and test results
+## Logs and test results
 
 Once you've written and executed your tests, it's essential to monitor their results. Patrol provides two main methods for reporting test outcomes: **console logs** and **native test reports**.
 
@@ -140,7 +140,7 @@ testWidgets(
 );
 ```
 
-# Allure
+## Allure
 
 ## Overview
 
@@ -344,7 +344,7 @@ allure serve ./build/reports/allure-results
   If you're using Homebrew, `brew install allure` is the quickest way to get
   Allure.
 
-[native setup]: /documentation
+[native setup]: https://patrol.leancode.co/documentation
 
 [allure]: https://qameta.io/allure-report
 

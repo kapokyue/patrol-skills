@@ -6,6 +6,7 @@ description: Serve Patrol framework docs with fast lookup and practical how-to g
 # Patrol Doc
 
 Answer Patrol documentation questions using the curated corpus in `references/`.
+Live documentation is available at [https://patrol.leancode.co/](https://patrol.leancode.co/).
 
 ## Workflow
 

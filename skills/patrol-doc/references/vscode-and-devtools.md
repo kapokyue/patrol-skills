@@ -1,7 +1,7 @@
 # Vscode And Devtools
 
 
-# Debugging Patrol tests
+## Debugging Patrol tests
 
 If you want to debug your application during patrol tests,
 you can do in Visual Studio Code by attaching a debugger to the running process.
@@ -46,7 +46,7 @@ Here is how you can do it:
 
 [issue]: https://github.com/flutter/flutter-intellij/issues/2250
 
-# Patrol DevTools Extension
+## Patrol DevTools Extension
 
 A powerful Flutter DevTools extension that allows you to **inspect native UI elements** on Android and iOS devices while developing your Patrol tests. This extension provides a tree view of native UI components, making it easier to write accurate selectors for your integration tests.
 
@@ -174,7 +174,7 @@ Full list of Android properties can be found:
 Full list of iOS properties can be found:
 [https://pub.dev/documentation/patrol/latest/patrol/IOSSelector-class.html](https://pub.dev/documentation/patrol/latest/patrol/IOSSelector-class.html)
 
-# Guide for Patrol VS Code extension
+## Guide for Patrol VS Code extension
 
 ## How to setup
 

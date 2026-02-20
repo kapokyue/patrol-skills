@@ -1,7 +1,7 @@
 # Troubleshooting And Best Practices
 
 
-# Effective Patrol
+## Effective Patrol
 
 Over the past months, we've written many Patrol tests and often learned the hard
 way what works well and what doesn't. We're sharing our findings hoping that
@@ -194,7 +194,7 @@ void main() {
 
 [rfc2119]: https://www.ietf.org/rfc/rfc2119.txt
 
-# Tips and tricks
+## Tips and tricks
 
 ### Inspecting native view hierarchy
 
@@ -299,7 +299,7 @@ an example:
 
 ```
 $ cat .patrol.env
-# Add your username here
+## Add your username here
 EMAIL=user@example.com
 PASSWORD=ny4ncat # The password for the API
 ```

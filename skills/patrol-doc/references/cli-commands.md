@@ -1,7 +1,7 @@
 # Cli Commands
 
 
-# build
+## build
 
 ### Synopsis
 
@@ -97,9 +97,9 @@ explaining the nuts and bolts.
 
 [patrol_v2_article]: https://leancode.co/blog/patrol-2-0-improved-flutter-ui-testing
 
-[native setup]: /documentation
+[native setup]: https://patrol.leancode.co/documentation
 
-# devices
+## devices
 
 ### Synopsis
 
@@ -115,7 +115,7 @@ To see all available options and flags, run `patrol devices --help`.
 
 It's intended to be a simpler, Patrol-aware alternative to `flutter devices`.
 
-# doctor
+## doctor
 
 ### Synopsis
 
@@ -127,7 +127,7 @@ patrol doctor
 
 To see all available options and flags, run `patrol doctor --help`.
 
-# develop
+## develop
 
 ### Synopsis
 
@@ -227,7 +227,7 @@ See also:
 
 [so_question]: https://stackoverflow.com/q/61787776/7009800
 
-# test
+## test
 
 ### Synopsis
 
@@ -418,9 +418,9 @@ features such as reporting. To see the full list of supported arguments, run `pa
 `patrol test` basically calls `patrol build` and then runs the built app
 binaries. For more info, read [docs of `patrol build`][patrol_build].
 
-[patrol_build]: /cli-commands/build
+[patrol_build]: https://patrol.leancode.co/cli-commands/build
 
-# update
+## update
 
 ### Synopsis
 

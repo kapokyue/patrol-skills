@@ -1,7 +1,7 @@
 # Installation And Setup
 
 
-# Install Patrol
+## Install Patrol
 
 Check out our video version of this tutorial on YouTube!
 
@@ -790,21 +790,21 @@ If you couldn't find an answer to your question/problem, feel free to ask on
 
 To learn how to write Patrol tests, see [finders] and [native automation] sections.
 
-[native automation]: /documentation/native/usage
+[native automation]: https://patrol.leancode.co/documentation/native/usage
 
-[Setup for physical iOS Devices]: /documentation/physical-ios-devices-setup
+[Setup for physical iOS Devices]: https://patrol.leancode.co/documentation/physical-ios-devices-setup
 
-[finders]: /documentation/finders/usage
+[finders]: https://patrol.leancode.co/documentation/finders/usage
 
-[Using Patrol finders in widget tests]: /documentation/finders/finders-setup
+[Using Patrol finders in widget tests]: https://patrol.leancode.co/documentation/finders/finders-setup
 
-[Here's why]: /documentation/native/advanced#embrace-the-native-tests
+[Here's why]: https://patrol.leancode.co/documentation/native/advanced#embrace-the-native-tests
 
 [Patrol CLI]: https://pub.dev/packages/patrol_cli
 
-[FAQ]: /documentation#faq
+[FAQ]: https://patrol.leancode.co/documentation#faq
 
-[Compatibility table]: /documentation/compatibility-table
+[Compatibility table]: https://patrol.leancode.co/documentation/compatibility-table
 
 [README]: https://pub.dev/packages/patrol_cli#installation
 
@@ -818,11 +818,11 @@ To learn how to write Patrol tests, see [finders] and [native automation] sectio
 
 [Patrol Discord Server]: https://discord.gg/ukBK5t4EZg
 
-[Initializing app inside a test]: /documentation#initializing-app-inside-a-test
+[Initializing app inside a test]: https://patrol.leancode.co/documentation#initializing-app-inside-a-test
 
 [`common.dart`]: https://github.com/leancodepl/patrol/blob/master/dev/e2e_app/integration_test/common.dart
 
-# Physical iOS devices
+## Physical iOS devices
 
 Because of restrictions on JIT, "in iOS 14+, debug mode Flutter apps can only be launched from Flutter tooling,IDEs..." we need to build and run tests in release mode.
 Going further, we need to sign the app and tests. Let's assume that your team joined Apple Developer Program and have already an App ID, profile and certificate for your app. We need to do the same for `RunnerUITests`.
