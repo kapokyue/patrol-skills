@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[3]
-SRC = ROOT / 'patrol-llms-full.txt'
+CORPUS_SOURCE = ROOT / 'patrol-llms-full.txt'
 OUT_DIR = ROOT / 'skills' / 'patrol-doc' / 'references'
 
 
@@ -71,12 +71,12 @@ def clean_mdx(text: str) -> str:
 
 
 def main() -> None:
-    if not SRC.exists():
-        raise FileNotFoundError(f'Source file not found: {SRC}')
+    if not CORPUS_SOURCE.exists():
+        raise FileNotFoundError(f'Source file not found: {CORPUS_SOURCE}')
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    raw_lines = SRC.read_text(encoding='utf-8').splitlines()
+    raw_lines = CORPUS_SOURCE.read_text(encoding='utf-8').splitlines()
     headings, starts = heading_index(raw_lines)
     ranges = section_ranges(headings, len(raw_lines))
 
@@ -178,15 +178,12 @@ def main() -> None:
         merged = '\n\n'.join(sections)
         content = clean_mdx(merged)
         title = file_name.removesuffix('.md').replace('-', ' ').title()
-        header = (
-            f'# {title}\n\n'
-            'Generated from curated sections of `patrol-llms-full.txt`.\n\n'
-        )
+        header = f'# {title}\n\n'
         (OUT_DIR / file_name).write_text(header + content, encoding='utf-8')
 
     index_lines = [
         '# Patrol Developer Corpus Index\n\n',
-        'Organized, developer-focused references extracted from `patrol-llms-full.txt`.\n\n',
+        'Organized, developer-focused references for the Patrol framework.\n\n',
         '## Files\n\n',
     ]
     for file_name in topics:
@@ -201,7 +198,6 @@ def main() -> None:
         '\n## Notes\n\n'
         '- This corpus prioritizes engineering usage (setup, CLI, automation, CI, troubleshooting).\n'
         '- MDX-specific wrapper components are flattened into plain Markdown where possible.\n'
-        '- Keep `patrol-llms-full.txt` as the canonical raw source.\n'
     )
 
     (OUT_DIR / 'index.md').write_text(''.join(index_lines), encoding='utf-8')

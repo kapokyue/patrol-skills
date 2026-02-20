@@ -1,6 +1,5 @@
 # 06 Native Automation
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Feature parity
 

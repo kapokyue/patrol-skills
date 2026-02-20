@@ -12,8 +12,7 @@ Answer Patrol documentation questions using the curated corpus in `references/`.
 1. Identify user intent: lookup, how-to, migration/compatibility, troubleshooting, or command usage.
 2. Open only the most relevant reference files listed below.
 3. Prefer exact command/flag snippets and explicit caveats from references.
-4. If information is missing or ambiguous, fall back to `patrol-llms-full.txt`.
-5. Keep responses concise and action-oriented.
+4. Keep responses concise and action-oriented.
 
 ## Reference Map
 

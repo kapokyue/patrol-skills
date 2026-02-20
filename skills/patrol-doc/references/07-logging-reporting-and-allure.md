@@ -1,6 +1,5 @@
 # 07 Logging Reporting And Allure
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Logs and test results
 

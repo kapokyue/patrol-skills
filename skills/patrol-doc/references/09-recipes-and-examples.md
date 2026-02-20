@@ -1,6 +1,5 @@
 # 09 Recipes And Examples
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Write your first test
 

@@ -1,6 +1,5 @@
 # 10 Vscode And Devtools
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Debugging Patrol tests
 

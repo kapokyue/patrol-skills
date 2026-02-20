@@ -1,6 +1,5 @@
 # 08 Ci And Device Farms
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Overview
 

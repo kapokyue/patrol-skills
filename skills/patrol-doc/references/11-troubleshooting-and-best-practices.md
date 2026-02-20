@@ -1,6 +1,5 @@
 # 11 Troubleshooting And Best Practices
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Effective Patrol
 

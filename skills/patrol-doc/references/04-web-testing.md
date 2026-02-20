@@ -1,6 +1,5 @@
 # 04 Web Testing
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Flutter Web Testing
 

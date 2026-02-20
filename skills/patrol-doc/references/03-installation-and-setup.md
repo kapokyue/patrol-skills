@@ -1,6 +1,5 @@
 # 03 Installation And Setup
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Install Patrol
 

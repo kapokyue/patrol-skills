@@ -1,6 +1,5 @@
 # 01 Overview And Compatibility
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Patrol
 

@@ -1,6 +1,6 @@
 # Patrol Developer Corpus Index
 
-Organized, developer-focused references extracted from `patrol-llms-full.txt`.
+Organized, developer-focused references for the Patrol framework.
 
 ## Files
 
@@ -32,4 +32,3 @@ Organized, developer-focused references extracted from `patrol-llms-full.txt`.
 
 - This corpus prioritizes engineering usage (setup, CLI, automation, CI, troubleshooting).
 - MDX-specific wrapper components are flattened into plain Markdown where possible.
-- Keep `patrol-llms-full.txt` as the canonical raw source.

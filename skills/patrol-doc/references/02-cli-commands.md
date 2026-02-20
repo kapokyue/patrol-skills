@@ -1,6 +1,5 @@
 # 02 Cli Commands
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # build
 

@@ -1,6 +1,5 @@
 # 05 Finders And Widget Tests
 
-Generated from curated sections of `patrol-llms-full.txt`.
 
 # Using Patrol finders in widget tests
 
