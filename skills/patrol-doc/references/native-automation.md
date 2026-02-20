@@ -1,4 +1,4 @@
-# 06 Native Automation
+# Native Automation
 
 
 # Feature parity

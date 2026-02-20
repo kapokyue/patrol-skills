@@ -1,4 +1,4 @@
-# 07 Logging Reporting And Allure
+# Logging Reporting And Allure
 
 
 # Logs and test results

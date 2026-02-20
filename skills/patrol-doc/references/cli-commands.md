@@ -1,4 +1,4 @@
-# 02 Cli Commands
+# Cli Commands
 
 
 # build
