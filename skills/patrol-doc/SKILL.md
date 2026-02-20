@@ -17,17 +17,17 @@ Answer Patrol documentation questions using the curated corpus in `references/`.
 ## Reference Map
 
 - `references/index.md` — corpus index, scope, and exclusions.
-- `references/01-overview-and-compatibility.md` — project overview, release notes, platform support, compatibility table.
-- `references/02-cli-commands.md` — `patrol build|devices|doctor|develop|test|update` usage and options.
-- `references/03-installation-and-setup.md` — install + Android/iOS/macOS setup and FAQ-level setup issues.
-- `references/04-web-testing.md` — web testing architecture, prerequisites, and web flags.
-- `references/05-finders-and-widget-tests.md` — `patrol_finders`, finder syntax, widget-test usage.
-- `references/06-native-automation.md` — `platform.mobile|android|ios|web` actions, feature parity, `native2`.
-- `references/07-logging-reporting-and-allure.md` — logs, native reports, Allure integration.
-- `references/08-ci-and-device-farms.md` — CI strategies and device farm options.
-- `references/09-recipes-and-examples.md` — first-test flow, practical platform recipes, tags examples.
-- `references/10-vscode-and-devtools.md` — Patrol DevTools + VS Code extension usage.
-- `references/11-troubleshooting-and-best-practices.md` — test stability, keying strategy, tips/tricks.
+- `references/overview-and-compatibility.md` — project overview, release notes, platform support, compatibility table.
+- `references/cli-commands.md` — `patrol build|devices|doctor|develop|test|update` usage and options.
+- `references/installation-and-setup.md` — install + Android/iOS/macOS setup and FAQ-level setup issues.
+- `references/web-testing.md` — web testing architecture, prerequisites, and web flags.
+- `references/finders-and-widget-tests.md` — `patrol_finders`, finder syntax, widget-test usage.
+- `references/native-automation.md` — `platform.mobile|android|ios|web` actions, feature parity, `native2`.
+- `references/logging-reporting-and-allure.md` — logs, native reports, Allure integration.
+- `references/ci-and-device-farms.md` — CI strategies and device farm options.
+- `references/recipes-and-examples.md` — first-test flow, practical platform recipes, tags examples.
+- `references/vscode-and-devtools.md` — Patrol DevTools + VS Code extension usage.
+- `references/troubleshooting-and-best-practices.md` — test stability, keying strategy, tips/tricks.
 
 ## Fast Lookup Hints
 

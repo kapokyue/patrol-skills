@@ -87,7 +87,7 @@ def main() -> None:
         return items[occurrence - 1]
 
     topics: dict[str, list[int]] = {
-        '01-overview-and-compatibility.md': [
+        'overview-and-compatibility.md': [
             get('Patrol'),
             get('Improved logging and reporting is here!'),
             get('New package - patrol_finders'),
@@ -96,7 +96,7 @@ def main() -> None:
             get('Supported platforms'),
             get('Compatibility table'),
         ],
-        '02-cli-commands.md': [
+        'cli-commands.md': [
             get('build'),
             get('devices'),
             get('doctor'),
@@ -104,29 +104,29 @@ def main() -> None:
             get('test'),
             get('update'),
         ],
-        '03-installation-and-setup.md': [
+        'installation-and-setup.md': [
             get('Install Patrol'),
             get('Physical iOS devices'),
         ],
-        '04-web-testing.md': [
+        'web-testing.md': [
             get('Flutter Web Testing'),
         ],
-        '05-finders-and-widget-tests.md': [
+        'finders-and-widget-tests.md': [
             get('Using Patrol finders in widget tests'),
             get('Overview', 2),
             get('Usage', 1),
         ],
-        '06-native-automation.md': [
+        'native-automation.md': [
             get('Feature parity'),
             get('Native Automation 2.0 (native2)'),
             get('Overview', 3),
             get('Usage', 2),
         ],
-        '07-logging-reporting-and-allure.md': [
+        'logging-reporting-and-allure.md': [
             get('Logs and test results'),
             get('Allure'),
         ],
-        '08-ci-and-device-farms.md': [
+        'ci-and-device-farms.md': [
             get('Overview', 1),
             get('Platforms'),
             get('Device labs'),
@@ -136,7 +136,7 @@ def main() -> None:
             get('LambdaTest'),
             get('LambdaTest overview'),
         ],
-        '09-recipes-and-examples.md': [
+        'recipes-and-examples.md': [
             get('Write your first test'),
             get('Disabling/enabling Bluetooth'),
             get('Granting camera permission'),
@@ -145,12 +145,12 @@ def main() -> None:
             get('Take photo using camera'),
             get('Patrol tags'),
         ],
-        '10-vscode-and-devtools.md': [
+        'vscode-and-devtools.md': [
             get('Patrol DevTools Extension'),
             get('Guide for Patrol VS Code extension'),
             get('Debugging Patrol tests'),
         ],
-        '11-troubleshooting-and-best-practices.md': [
+        'troubleshooting-and-best-practices.md': [
             get('Effective Patrol'),
             get('Tips and tricks'),
         ],

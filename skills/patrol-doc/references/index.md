@@ -4,17 +4,17 @@ Organized, developer-focused references for the Patrol framework.
 
 ## Files
 
-- [01-overview-and-compatibility.md](./01-overview-and-compatibility.md)
-- [02-cli-commands.md](./02-cli-commands.md)
-- [03-installation-and-setup.md](./03-installation-and-setup.md)
-- [04-web-testing.md](./04-web-testing.md)
-- [05-finders-and-widget-tests.md](./05-finders-and-widget-tests.md)
-- [06-native-automation.md](./06-native-automation.md)
-- [07-logging-reporting-and-allure.md](./07-logging-reporting-and-allure.md)
-- [08-ci-and-device-farms.md](./08-ci-and-device-farms.md)
-- [09-recipes-and-examples.md](./09-recipes-and-examples.md)
-- [10-vscode-and-devtools.md](./10-vscode-and-devtools.md)
-- [11-troubleshooting-and-best-practices.md](./11-troubleshooting-and-best-practices.md)
+- [overview-and-compatibility.md](./overview-and-compatibility.md)
+- [cli-commands.md](./cli-commands.md)
+- [installation-and-setup.md](./installation-and-setup.md)
+- [web-testing.md](./web-testing.md)
+- [finders-and-widget-tests.md](./finders-and-widget-tests.md)
+- [native-automation.md](./native-automation.md)
+- [logging-reporting-and-allure.md](./logging-reporting-and-allure.md)
+- [ci-and-device-farms.md](./ci-and-device-farms.md)
+- [recipes-and-examples.md](./recipes-and-examples.md)
+- [vscode-and-devtools.md](./vscode-and-devtools.md)
+- [troubleshooting-and-best-practices.md](./troubleshooting-and-best-practices.md)
 
 ## Excluded from primary corpus
 
