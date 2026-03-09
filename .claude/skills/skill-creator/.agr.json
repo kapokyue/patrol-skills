@@ -1,6 +1,6 @@
 {
   "id": "remote:github:anthropics/skills/skill-creator",
-  "tool": "antigravity",
+  "tool": "claude",
   "installed_name": "skill-creator",
   "type": "remote",
   "handle": "anthropics/skills/skill-creator",
